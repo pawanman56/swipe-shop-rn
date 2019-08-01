@@ -6,21 +6,25 @@ const cards = [
   {
     text: 'Shirt One',
     name: 'One',
+    price: '123',
     image: require('../assests/images/shirt-1.jpg'),
   },
   {
     text: 'Shirt Two',
     name: 'Two',
+    price: '123',
     image: require('../assests/images/shirt-2.jpg'),
   },
   {
     text: 'Shirt Three',
     name: 'Three',
+    price: '123',
     image: require('../assests/images/shirt-3.jpg'),
   },
   {
     text: 'Shirt Four',
     name: 'Four',
+    price: '123',
     image: require('../assests/images/shirt-4.jpg'),
   }
 ];
@@ -47,8 +51,10 @@ export default class DeckSwiperExample extends Component {
                   <Image style={{ height: 300, flex: 1 }} source={item.image} />
                 </CardItem>
                 <CardItem>
-                  <Icon name="heart" style={{ color: '#ED4A6A' }} />
                   <Text>{item.name}</Text>
+                </CardItem>
+                <CardItem>
+                  <Text>Rs. {item.price}</Text> 
                 </CardItem>
               </Card>
             }

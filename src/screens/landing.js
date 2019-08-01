@@ -1,10 +1,7 @@
 import React, { Component } from 'react';
 import { Button, StyleSheet, Text, View } from 'react-native';
-import { createStackNavigator, createAppContainer } from 'react-navigation';
 
-import DeckSwipe from './deckSwiper';
-
-class Landing extends Component {
+export default class Landing extends Component {
   render() {
     const { container } = styles;
 
@@ -20,16 +17,6 @@ class Landing extends Component {
   }
 }
 
-const AppNavigation = createStackNavigator(
-  {
-    Home: Landing,
-    DeckSwiper: DeckSwipe
-  },
-  {
-    initialRouteName: 'Home'
-  }
-);
-
 const styles = StyleSheet.create({
   container: {
     flex: 1,
@@ -37,5 +24,3 @@ const styles = StyleSheet.create({
     alignItems: 'center'
   }
 });
-
-export default createAppContainer(AppNavigation);

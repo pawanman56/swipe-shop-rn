@@ -1,7 +1,7 @@
 import React from 'react';
 import { createAppContainer } from 'react-navigation';
 
-import AppNavigator from './src/screens/landing';
+import AppNavigator from './src/screens/navigation/appNavigation';
 
 const AppContainer = createAppContainer(AppNavigator);
 
