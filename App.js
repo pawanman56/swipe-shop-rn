@@ -1,10 +1,12 @@
 import React from 'react';
-import Landing from './src/screens/landing';
+import { createAppContainer } from 'react-navigation';
 
-const App = () => {
-  return(
-    <Landing />
-  )
+import AppNavigator from './src/screens/landing';
+
+const AppContainer = createAppContainer(AppNavigator);
+
+export default class App extends React.Component {
+  render() {
+    return <AppContainer />
+  }
 }
-
-export default App;
