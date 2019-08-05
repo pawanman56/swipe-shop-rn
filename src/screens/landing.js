@@ -15,10 +15,14 @@ const options = [
   {
     key: 'men',
     text: 'Men',
+    icon: 'user',
+    iconType: 'SimpleLineIcons',
   },
   {
     key: 'women',
-    text: 'Women'
+    text: 'Women',
+    icon: 'user-female',
+    iconType: 'SimpleLineIcons',
   }
 ];
 

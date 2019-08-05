@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { StyleSheet, TouchableOpacity } from 'react-native';
-import { View, Text } from 'native-base';
+import { View, Text, Icon } from 'native-base';
 
 export default class RadioButton extends Component {
   state = {
@@ -30,10 +30,20 @@ export default class RadioButton extends Component {
                 { 
                   (isSelected === item.key) ? (
                     <View style={radioButtonSelected}>
+                      <Icon
+                        name={item.icon}
+                        type={item.iconType}
+                        style={{ color: '#ffffff' }}
+                      />
                       <Text style={{ color: '#ffffff' }}>{item.text}</Text>
                     </View>
                   ) : (
                     <View style={radioButtonDefault}>
+                      <Icon
+                        name={item.icon}
+                        type={item.iconType}
+                        style={{ color: '#82589F' }}
+                      />
                       <Text style={{ color: '#82589F' }}>{item.text}</Text>
                     </View>
                   )
@@ -51,18 +61,20 @@ const styles = StyleSheet.create({
   radioContainer: {
     flex: 1,
     flexDirection: 'row',
-    justifyContent: 'space-around',
+    justifyContent: 'space-between',
     alignItems: 'center'
   },
 
   radioButton: {
     flex: 1,
-    justifyContent: 'center',
+    flexBasis: 0,
     alignItems: 'center'
   },
 
   radioButtonDefault: {
     flex: 1,
+    width: 120,
+    height: 120,
     padding: 10,
     alignItems: 'center',
     justifyContent: 'center',
@@ -73,7 +85,8 @@ const styles = StyleSheet.create({
 
   radioButtonSelected: {
     flex: 1,
-    color: '#ffffff',
+    width: 120,
+    height: 120,
     padding: 10,
     alignItems: 'center',
     justifyContent: 'center',
