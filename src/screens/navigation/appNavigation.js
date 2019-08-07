@@ -5,7 +5,12 @@ import DeckSwiper from '../deckSwiper';
 
 const AppNavigation = createStackNavigator(
   {
-    Home: Landing,
+    Home: {
+      screen: Landing,
+      navigationOptions: () => ({
+        header: null
+      })
+    },
     DeckSwiper: DeckSwiper
   },
   {
